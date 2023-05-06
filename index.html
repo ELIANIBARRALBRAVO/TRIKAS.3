@@ -1,23 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+    <head>
+        <title>El Rincon de los Animales</title>
+        <link rel="stylesheet" href="Trivia.css">
+    </head>
+    <body>
+ <h1>ADIVINA QUE ANIMAL ES</h1>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+  <div id="pantalla-inicial">
+    <p>¿Estas listo para comenzar?</p>
+    <button class="btn" onclick="comenzarJuego()">COMENZAR A JUGAR</button>
+  </div>
 
-<body>
-  Hello STUDENT
-  <script src="script.js"></script>
-
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
-</body>
-
+ <div class="pantalla-juego" id="pantalla-juego">
+ <img src="zorrillo.png" alt="" id="imganimal">
+  <div class="Opciones">
+     <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+        <div class="letra" id="l0">A</div>
+        <div class="nombre" id="n0">Opcion A</div>
+     </div>
+     <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+        <div class="letra" id="l1">B</div>
+        <div class="nombre" id="n1">Opcion B</div>
+     </div>
+     <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+        <div class="letra" id="l2">C</div>
+        <div class="nombre" id="n2">Opcion C</div>
+     </div>
+  </div>
+ </div>
+ <div id="pantalla-final">
+    <h2>CORRECTAS: <span id="numCorrectas">3</span></h2>
+    <h2>INCORRECTAS <span id="numIncorrectas">2</span></h2>
+    <button class="btn" onclick="volverAlInicio()">Volver a empezar</button>
+ </div>
+    <script src="Trivia.js"></script>
+    </body>
 </html>
